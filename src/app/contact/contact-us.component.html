@@ -1,0 +1,46 @@
+<h2>Contactez-nous</h2>
+
+<form #form="ngForm" (submit) = "sendMessage(form)" novalidate>
+    <div class="form-group" [class.has-error] ="msgSubject.invalid && msgSubject.touched">
+        <label for="subject" class="control-label">Sujet</label>
+        <input type="text" 
+               #msgSubject = "ngModel"
+               ngModel
+               name = "subject"
+               required
+               class ="form-control" 
+               placeholder="sujet" 
+               id="subject">
+    </div>
+    
+    <div class="form-group" [class.has-error] ="msgContent.invalid && msgContent.touched">
+            <label for="message" class="control-label">Message</label>
+            
+            <textarea type="text"  
+                   #msgContent ="ngModel"
+                   ngModel
+                   required
+                   name ="message"
+                   class ="form-control" 
+                   placeholder="message" 
+                   id="message">
+                </textarea>
+    </div>
+
+    <div class="form-group">
+            <label for="service">Sujet</label>
+            <select type="text" 
+                   class ="form-control"                    
+                   ngModel
+                   name ="service"
+                   id="service">
+                   <option value="tech">technique</option>
+                   <option value="sales">commercial</option>
+                   <option value="guide">guide moyenne montagne</option>
+            </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">envoyer</button>
+
+</form>
+Form: {{form.value | json}}

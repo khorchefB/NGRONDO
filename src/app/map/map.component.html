@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div >
+        <h2>Carte de prochaine randonnée</h2>
+        </div>
+    
+        <div class="col-md-6">
+            <button (click)="geoCode()">Localiser</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <agm-map [latitude]="lat" [longitude]="lng">
+                <agm-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="true" (dragEnd)="markerDragEnd($event)"></agm-marker>
+        </agm-map>
+    </div>
+
+    <div *ngIf="markerWasDropped">
+        latitude : {{droppedLat}} longitude: {{droppedLng}}
+
+    </div>
+
+</div>

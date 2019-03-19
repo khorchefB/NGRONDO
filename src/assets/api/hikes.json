@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "name": "Saint-Aubin-du-Cormier",
+        "area": "Ille-et-Vilaine",
+        "region": "Bretagne",
+        "startingPoint": "Plan d'eau",
+        "distance": 12.8,
+        "distanceUnit": "km",
+        "duration": 240,
+        "heightDifference": 267,
+        "description": "Randonnée sympa entre doudou et youyou",
+        "evaluation": [4, 5, 3]
+    },
+    {
+        "id": 2,
+        "name": "Vallée du Couesnon",
+        "area": "Ille-et-Vilaine",
+        "region": "Bretagne",
+        "startingPoint": "Château de la ville olivier",
+        "distance": 15.6,
+        "distanceUnit": "km",
+        "duration": 270,
+        "heightDifference": 200,
+        "description": "C'est une petite maison dans la prairie.",
+        "evaluation": [5, 5]
+    }
+]

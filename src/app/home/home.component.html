@@ -1,0 +1,38 @@
+<div class="row">
+    <h2> Hello sur le site des randonneur </h2>
+</div>
+    <div class="row">
+        <button (click) =" toggle()" *ngIf="!open" class="btn btn-primary"> ouvrir </button>
+        <button (click) =" toggle()" *ngIf="open" class="btn btn-danger"> fermer </button>
+
+        <div [@toggleElement] ="toggleElement">
+            <!-- start slipsum code -->
+            Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. 
+            Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
+            <!-- end slipsum code -->
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <h3>Citation</h3>
+        <div class="frame col-md-12">
+            <div class="citation" [@animateCitation]= "animateCitation" (@animateCitation.start) = "log($event)">
+                    {{quote.text}}
+                    <br>
+                    {{quote.author}}
+            </div>            
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-2">
+            <button class="btn btn-primary" (click) = "getPreviousQuote()"> précedente</button>
+            
+        </div>
+        <div class="col-md-2">
+                <button class="btn btn-primary" (click) = "getNextQuote()"> suivante</button>
+        </div>
+        
+    </div>
+
+    
